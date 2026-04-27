@@ -1,13 +1,13 @@
 :root {
   --bg-dark: #0a0f16;
   --bg-card: #131b26;
-  --text-main: #f0f4f8;
-  --text-muted: #94a3b8;
-  --accent-blue: #0070f3;
-  --accent-blue-glow: rgba(0, 112, 243, 0.5);
-  --accent-cyan: #00e5ff;
-  --border-color: rgba(255, 255, 255, 0.1);
-  --glass-bg: rgba(19, 27, 38, 0.7);
+  --text-main: #ffffff; /* Improved contrast */
+  --text-muted: #cbd5e1; /* Much brighter for accessibility */
+  --accent-blue: #3b82f6; /* Brighter blue */
+  --accent-blue-glow: rgba(59, 130, 246, 0.5);
+  --accent-cyan: #06b6d4; /* Brighter cyan */
+  --border-color: rgba(255, 255, 255, 0.15);
+  --glass-bg: rgba(19, 27, 38, 0.85);
 }
 
 * {
@@ -45,6 +45,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row-reverse; /* Put logo on the left, links on the right in RTL */
   background: var(--glass-bg);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-color);
@@ -81,6 +82,7 @@ body {
   color: var(--text-main);
   text-decoration: none;
   font-weight: 400;
+  font-size: 1.15rem; /* Increased font size */
   transition: color 0.3s ease;
 }
 
@@ -115,7 +117,7 @@ body {
 }
 
 .hero p {
-  font-size: 1.25rem;
+  font-size: 1.35rem; /* Increased font size */
   color: var(--text-muted);
   margin-bottom: 2rem;
 }

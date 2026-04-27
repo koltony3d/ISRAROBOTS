@@ -2,8 +2,8 @@ import React from 'react';
 import { Layers, Cpu, Wrench, ChevronLeft, Hexagon } from 'lucide-react';
 import './index.css';
 
-// Image paths from public folder
-const heroImage = './hero.png';
+// Image paths from public folder / external
+const heroImage = 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop'; // High quality Unsplash 3D abstract
 const modelImage1 = './model.png';
 
 function App() {
@@ -27,8 +27,8 @@ function App() {
           style={{ backgroundImage: `url('${heroImage}')` }}
         />
         <div className="hero-content">
-          <h1>מביאים <span>רעיונות</span> למציאות</h1>
-          <p>שירותי תכנון מודלים והדפסות תלת-ממד מקצועיים. מדיוק הנדסי ועד לעיצוב אומנותי – אנחנו הופכים את החזון שלך למוצר מוחשי בטכנולוגיות המתקדמות ביותר.</p>
+          <h1>המקום שבו <span>רעיונות</span> מקבלים צורה</h1>
+          <p>שירותי תכנון מודלים והדפסות תלת-ממד מקצועיים. מדיוק הנדסי ועד לעיצוב אומנותי – אנחנו הופכים את החזון שלך למוצר מוחשי בטכנולוגיות המתקדמות ביותר</p>
           <button className="btn-primary" onClick={() => document.getElementById('contact').scrollIntoView()}>
             בקש הצעת מחיר <ChevronLeft size={20} style={{ verticalAlign: 'middle', marginRight: '8px' }} />
           </button>
@@ -41,17 +41,17 @@ function App() {
           <div className="service-card">
             <Layers className="service-icon" size={48} />
             <h3>תכנון ומידול 3D</h3>
-            <p>המרת רעיונות, סקיצות או שרטוטים למודלים תלת-ממדיים מדויקים המוכנים להדפסה או לייצור.</p>
+            <p>המרת רעיונות, סקיצות או שרטוטים למודלים תלת-ממדיים מדויקים המוכנים להדפסה או לייצור</p>
           </div>
           <div className="service-card">
             <Cpu className="service-icon" size={48} />
             <h3>הדפסה מתקדמת</h3>
-            <p>הדפסה במגוון חומרים (PLA, ABS, PETG, חומרים גמישים) ברזולוציה גבוהה וגימור מושלם.</p>
+            <p>הדפסה במגוון חומרים (PLA, ABS, PETG, חומרים גמישים) ברזולוציה גבוהה וגימור מושלם</p>
           </div>
           <div className="service-card">
             <Wrench className="service-icon" size={48} />
             <h3>אב טיפוס ורובוטיקה</h3>
-            <p>ייצור חלקים מכניים לרובוטיקה ופיתוח אבות טיפוס פונקציונליים עבור מיזמים וסטארטאפים.</p>
+            <p>ייצור חלקים מכניים לרובוטיקה ופיתוח אבות טיפוס פונקציונליים עבור מיזמים וסטארטאפים</p>
           </div>
         </div>
       </section>
@@ -97,7 +97,7 @@ function App() {
       </section>
 
       <footer>
-        <p>&copy; {new Date().getFullYear()} ISRAROBOTS. כל הזכויות שמורות.</p>
+        <p>&copy; {new Date().getFullYear()} ISRAROBOTS. כל הזכויות שמורות</p>
       </footer>
     </>
   );
