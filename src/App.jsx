@@ -4,8 +4,8 @@ import './index.css';
 
 // Image paths from public folder / external
 const heroImage = 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop'; // High quality Unsplash 3D abstract
-const servicesBg = 'https://images.unsplash.com/photo-1631557005472-e1488c035677?q=80&w=2564&auto=format&fit=crop'; // 3D tech background
-const contactBg = 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2564&auto=format&fit=crop'; // Tech circuit background
+const servicesBg = 'https://images.unsplash.com/photo-1615592389070-bcc97e05ad01?q=80&w=2564&auto=format&fit=crop'; // 3D printer
+const contactBg = 'https://images.unsplash.com/photo-1589254066007-898d52d910d3?q=80&w=2564&auto=format&fit=crop'; // Robotic arm and mechanics
 const modelImage1 = './model.png';
 
 function App() {
