@@ -2,8 +2,8 @@ import React from 'react';
 import { Layers, Cpu, PenTool, ArrowLeft, Hexagon } from 'lucide-react';
 import './index.css';
 
-// Professional industrial engineering images
-const heroImage = 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2564&auto=format&fit=crop'; 
+// Hero image — 3D printing process, idea to product
+const heroImage = 'https://images.unsplash.com/photo-1565945887714-d5139f4eb0ce?q=80&w=2564&auto=format&fit=crop';
 const contactImage = 'https://images.unsplash.com/photo-1589254066007-898d52d910d3?q=80&w=2564&auto=format&fit=crop'; 
 
 function App() {
@@ -24,7 +24,11 @@ function App() {
       </header>
 
       <section className="hero">
-        <div className="container hero-split">
+        <div className="hero-bg">
+          <img src={heroImage} alt="3D Printing" className="hero-bg-img" />
+          <div className="hero-bg-overlay"></div>
+        </div>
+        <div className="container hero-content">
           <div className="hero-text-content">
             <h1 className="hero-title">מרעיון למוצר — תכנון, מידול והדפסה במקום אחד</h1>
             <p className="hero-subtitle">
@@ -35,9 +39,6 @@ function App() {
                 התחלת פרויקט <ArrowLeft size={18} className="btn-icon" />
               </button>
             </div>
-          </div>
-          <div className="hero-image-container">
-            <img src={heroImage} alt="Industrial 3D Printing and Engineering" className="hero-image" />
           </div>
         </div>
       </section>
