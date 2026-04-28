@@ -1,119 +1,120 @@
 import React from 'react';
-import { Layers, Cpu, Wrench, ChevronLeft, Hexagon } from 'lucide-react';
+import { Layers, Cpu, PenTool, ArrowLeft, Hexagon } from 'lucide-react';
 import './index.css';
 
-// Image paths from public folder / external
-const heroImage = 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop'; // High quality Unsplash 3D abstract
-const servicesBg = 'https://images.unsplash.com/photo-1615592389070-bcc97e05ad01?q=80&w=2564&auto=format&fit=crop'; // 3D printer
-const contactBg = 'https://images.unsplash.com/photo-1589254066007-898d52d910d3?q=80&w=2564&auto=format&fit=crop'; // Robotic arm and mechanics
-const modelImage1 = './model.png';
+// Professional industrial engineering images
+const heroImage = 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2564&auto=format&fit=crop'; 
+const contactImage = 'https://images.unsplash.com/photo-1589254066007-898d52d910d3?q=80&w=2564&auto=format&fit=crop'; 
 
 function App() {
   return (
-    <>
+    <div className="app-container">
       <header className="header">
-        <div className="logo-container" onClick={() => window.scrollTo(0,0)}>
-          <Hexagon className="logo-icon" size={64} />
-          <div className="logo-text">ISRAROBOTS</div>
+        <div className="container header-content">
+          <div className="logo-container" onClick={() => window.scrollTo(0,0)}>
+            <Hexagon className="logo-icon" size={28} strokeWidth={2.5} />
+            <div className="logo-text">ISRAROBOTS</div>
+          </div>
+          <nav className="nav-links">
+            <a href="#services">שירותים הנדסיים</a>
+            <a href="#about">טכנולוגיות</a>
+            <a href="#contact" className="nav-btn">צור קשר</a>
+          </nav>
         </div>
-        <nav className="nav-links">
-          <a href="#services">שירותים</a>
-          <a href="#portfolio">עבודות</a>
-          <a href="#contact">צור קשר</a>
-        </nav>
       </header>
 
       <section className="hero">
-        <div 
-          className="hero-bg" 
-          style={{ backgroundImage: `url('${heroImage}')` }}
-        />
-        <div className="hero-content">
-          <h1>המקום שבו <span>רעיונות</span> מקבלים צורה</h1>
-          <p>שירותי תכנון מודלים והדפסות תלת-ממד מקצועיים. מדיוק הנדסי ועד לעיצוב אומנותי – אנחנו הופכים את החזון שלך למוצר מוחשי בטכנולוגיות המתקדמות ביותר</p>
-          <button className="btn-primary" onClick={() => document.getElementById('contact').scrollIntoView()}>
-            בקש הצעת מחיר <ChevronLeft size={20} style={{ verticalAlign: 'middle', marginRight: '8px' }} />
-          </button>
+        <div className="container hero-split">
+          <div className="hero-text-content">
+            <h1 className="hero-title">הנדסה וייצור<br/>בתלת-ממד</h1>
+            <p className="hero-subtitle">
+              פתרונות תכנון, מידול והדפסה מתקדמים למהנדסים ולתעשייה. אנו מלווים אתכם משלב הרעיון, דרך פיתוח אב-טיפוס פונקציונלי, ועד לייצור סדרתי בדיוק הנדסי מרבי.
+            </p>
+            <div className="hero-actions">
+              <button className="btn btn-primary" onClick={() => document.getElementById('contact').scrollIntoView()}>
+                התחלת פרויקט <ArrowLeft size={18} className="btn-icon" />
+              </button>
+            </div>
+          </div>
+          <div className="hero-image-container">
+            <img src={heroImage} alt="Industrial 3D Printing and Engineering" className="hero-image" />
+          </div>
         </div>
       </section>
 
-      <section id="services" className="hero" style={{ minHeight: 'auto', padding: '6rem 5%' }}>
-        <div 
-          className="hero-bg purple-overlay" 
-          style={{ backgroundImage: `url('${servicesBg}')` }}
-        />
-        <div className="hero-content" style={{ maxWidth: '1200px', width: '100%', margin: '0 auto' }}>
-          <h2 className="section-title" style={{ textAlign: 'right' }}>השירותים <span>שלנו</span></h2>
+      <section id="services" className="section bg-light">
+        <div className="container">
+          <div className="section-header">
+            <h2 className="section-title">שירותים מקצועיים</h2>
+            <p className="section-description">מעטפת הנדסית מלאה המותאמת לדרישות התעשייה</p>
+          </div>
           <div className="services-grid">
-            <div className="service-card glass-card">
-              <Layers className="service-icon" size={48} />
-              <h3>תכנון ומידול 3D</h3>
-              <p>המרת רעיונות, סקיצות או שרטוטים למודלים תלת-ממדיים מדויקים המוכנים להדפסה או לייצור</p>
+            <div className="service-card">
+              <div className="icon-wrapper">
+                <PenTool size={32} />
+              </div>
+              <h3>תכנון מכני (CAD)</h3>
+              <p>המרת רעיונות ושרטוטים למודלים תלת-ממדיים פרמטריים המוכנים לייצור, תוך התחשבות באילוצי חומרים ומכניקה.</p>
             </div>
-            <div className="service-card glass-card">
-              <Cpu className="service-icon" size={48} />
-              <h3>הדפסה מתקדמת</h3>
-              <p>הדפסה במגוון חומרים (PLA, ABS, PETG, חומרים גמישים) ברזולוציה גבוהה וגימור מושלם</p>
+            <div className="service-card">
+              <div className="icon-wrapper">
+                <Layers size={32} />
+              </div>
+              <h3>ייצור מתקדם בתלת-ממד</h3>
+              <p>הדפסה במגוון פולימרים טכניים (ABS, PETG, PC, ניילון) המבטיחה עמידות מכנית ודיוק מידות ברזולוציה גבוהה.</p>
             </div>
-            <div className="service-card glass-card">
-              <Wrench className="service-icon" size={48} />
-              <h3>אב טיפוס ורובוטיקה</h3>
-              <p>ייצור חלקים מכניים לרובוטיקה ופיתוח אבות טיפוס פונקציונליים עבור מיזמים וסטארטאפים</p>
+            <div className="service-card">
+              <div className="icon-wrapper">
+                <Cpu size={32} />
+              </div>
+              <h3>פיתוח אבות-טיפוס</h3>
+              <p>ייצור מואץ של מכלולים מכניים לרובוטיקה ואבות-טיפוס פונקציונליים עבור מיזמים טכנולוגיים וחברות חומרה.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="portfolio" className="section" style={{ background: 'var(--bg-card)' }}>
-        <h2 className="section-title">דוגמאות <span>מהסטודיו</span></h2>
-        <div className="gallery-grid">
-          <div className="gallery-item">
-            <img src={modelImage1} alt="3D Model Gear" />
-            <div className="gallery-overlay">
-              <h3>חלק מכני מורכב</h3>
-              <p>הדפסה ברזולוציה גבוהה לחלקי רובוטיקה</p>
+      <section id="contact" className="section">
+        <div className="container contact-split">
+          <div className="contact-image-container">
+            <img src={contactImage} alt="Robotics and Mechanics" className="contact-image" />
+            <div className="contact-info-overlay">
+              <h3>ISRAROBOTS</h3>
+              <p>המחלקה להנדסה וייצור</p>
             </div>
           </div>
-          <div className="gallery-item" style={{ background: '#0a0f16', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <h3 style={{ color: 'var(--text-muted)' }}>פרויקט בקרוב...</h3>
-          </div>
-          <div className="gallery-item" style={{ background: '#0a0f16', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <h3 style={{ color: 'var(--text-muted)' }}>פרויקט בקרוב...</h3>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" className="hero" style={{ minHeight: 'auto', padding: '6rem 5%' }}>
-        <div 
-          className="hero-bg cyan-overlay" 
-          style={{ backgroundImage: `url('${contactBg}')` }}
-        />
-        <div className="hero-content" style={{ maxWidth: '800px', width: '100%', margin: '0 auto' }}>
-          <h2 className="section-title" style={{ textAlign: 'right' }}>בואו נדבר על <span>הפרויקט</span> שלכם</h2>
-          <div className="contact-container glass-card">
-            <form onSubmit={(e) => e.preventDefault()}>
+          <div className="contact-form-container">
+            <h2 className="section-title">יצירת קשר מקצועי</h2>
+            <p className="contact-subtitle">מלאו את הפרטים ונחזור אליכם עם אפיון והצעת מחיר.</p>
+            <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
               <div className="form-group">
-                <label>שם מלא</label>
-                <input type="text" className="form-control" placeholder="ישראל ישראלי" />
+                <label>שם מלא / חברה</label>
+                <input type="text" className="form-control" />
               </div>
               <div className="form-group">
-                <label>אימייל</label>
-                <input type="email" className="form-control" placeholder="example@email.com" />
+                <label>אימייל ארגוני</label>
+                <input type="email" className="form-control" />
               </div>
               <div className="form-group">
-                <label>ספר לנו על הרעיון שלך</label>
-                <textarea className="form-control" placeholder="אני מעוניין להדפיס..."></textarea>
+                <label>פירוט הדרישות הטכניות (מידות, חומרים, כמויות)</label>
+                <textarea className="form-control" rows="5"></textarea>
               </div>
-              <button type="submit" className="submit-btn">שלח פנייה</button>
+              <button type="submit" className="btn btn-primary btn-full">שליחת פנייה</button>
             </form>
           </div>
         </div>
       </section>
 
-      <footer>
-        <p>&copy; {new Date().getFullYear()} ISRAROBOTS. כל הזכויות שמורות</p>
+      <footer className="footer">
+        <div className="container footer-content">
+          <div className="logo-container">
+            <Hexagon className="logo-icon" size={20} />
+            <span className="logo-text-small">ISRAROBOTS</span>
+          </div>
+          <p>&copy; {new Date().getFullYear()} כל הזכויות שמורות.</p>
+        </div>
       </footer>
-    </>
+    </div>
   );
 }
 
