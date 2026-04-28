@@ -26,9 +26,9 @@ function App() {
       <section className="hero">
         <div className="container hero-split">
           <div className="hero-text-content">
-            <h1 className="hero-title">הנדסה וייצור<br/>בתלת-ממד</h1>
+            <h1 className="hero-title">המקום שבו <span>רעיונות</span> מקבלים צורה</h1>
             <p className="hero-subtitle">
-              פתרונות תכנון, מידול והדפסה מתקדמים למהנדסים ולתעשייה. אנו מלווים אתכם משלב הרעיון, דרך פיתוח אב-טיפוס פונקציונלי, ועד לייצור סדרתי בדיוק הנדסי מרבי.
+              שירותי תכנון מודלים והדפסות תלת-ממד מקצועיים. מדיוק הנדסי ועד לעיצוב אומנותי – אנחנו הופכים את החזון שלך למוצר מוחשי בטכנולוגיות המתקדמות ביותר
             </p>
             <div className="hero-actions">
               <button className="btn btn-primary" onClick={() => document.getElementById('contact').scrollIntoView()}>
@@ -54,21 +54,21 @@ function App() {
                 <PenTool size={32} />
               </div>
               <h3>תכנון מכני (CAD)</h3>
-              <p>המרת רעיונות ושרטוטים למודלים תלת-ממדיים פרמטריים המוכנים לייצור, תוך התחשבות באילוצי חומרים ומכניקה.</p>
+              <p>המרת רעיונות ושרטוטים למודלים תלת-ממדיים פרמטריים המוכנים לייצור, תוך התחשבות באילוצי חומרים ומכניקה</p>
             </div>
             <div className="service-card">
               <div className="icon-wrapper">
                 <Layers size={32} />
               </div>
               <h3>ייצור מתקדם בתלת-ממד</h3>
-              <p>הדפסה במגוון פולימרים טכניים (ABS, PETG, PC, ניילון) המבטיחה עמידות מכנית ודיוק מידות ברזולוציה גבוהה.</p>
+              <p>הדפסה במגוון פולימרים טכניים (ABS, PETG, PC, ניילון) המבטיחה עמידות מכנית ודיוק מידות ברזולוציה גבוהה</p>
             </div>
             <div className="service-card">
               <div className="icon-wrapper">
                 <Cpu size={32} />
               </div>
               <h3>פיתוח אבות-טיפוס</h3>
-              <p>ייצור מואץ של מכלולים מכניים לרובוטיקה ואבות-טיפוס פונקציונליים עבור מיזמים טכנולוגיים וחברות חומרה.</p>
+              <p>ייצור מואץ של מכלולים מכניים לרובוטיקה ואבות-טיפוס פונקציונליים עבור מיזמים טכנולוגיים וחברות חומרה</p>
             </div>
           </div>
         </div>
@@ -85,7 +85,7 @@ function App() {
           </div>
           <div className="contact-form-container">
             <h2 className="section-title">יצירת קשר מקצועי</h2>
-            <p className="contact-subtitle">מלאו את הפרטים ונחזור אליכם עם אפיון והצעת מחיר.</p>
+            <p className="contact-subtitle">מלאו את הפרטים ונחזור אליכם עם אפיון והצעת מחיר</p>
             <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
               <div className="form-group">
                 <label>שם מלא / חברה</label>
@@ -111,7 +111,7 @@ function App() {
             <Hexagon className="logo-icon" size={20} />
             <span className="logo-text-small">ISRAROBOTS</span>
           </div>
-          <p>&copy; {new Date().getFullYear()} כל הזכויות שמורות.</p>
+          <p>&copy; {new Date().getFullYear()} כל הזכויות שמורות</p>
         </div>
       </footer>
     </div>

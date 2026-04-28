@@ -1,21 +1,21 @@
 :root {
-  /* Clean Professional B2B Light Theme Palette */
-  --bg-main: #ffffff;
-  --bg-light: #f8fafc;
-  --bg-surface: #ffffff;
+  /* Colorful but professional dark theme */
+  --bg-main: #0B1120;
+  --bg-light: rgba(30, 41, 59, 0.4);
+  --bg-surface: rgba(15, 23, 42, 0.6);
   
-  --text-main: #0f172a;     /* Very dark blue/grey, highly readable */
-  --text-muted: #475569;    /* Excellent contrast on white (> 4.5:1) */
-  --text-light: #94a3b8;
+  --text-main: #ffffff;     /* Pure white for maximum clarity */
+  --text-muted: #e2e8f0;    /* Very bright light slate for high contrast */
+  --text-light: #f8fafc;
   
-  --accent-primary: #1e3a8a; /* Deep corporate structural blue */
-  --accent-secondary: #f97316; /* Industrial orange accent */
+  --accent-primary: #3b82f6; /* Professional blue */
+  --accent-secondary: #8b5cf6; /* Gentle colorful purple */
   
-  --border-color: #e2e8f0;
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+  --border-color: rgba(255, 255, 255, 0.15);
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --shadow-sm: 0 4px 6px -1px rgba(0,0,0,0.1);
+  --shadow-md: 0 10px 15px -3px rgba(0,0,0,0.1);
 }
 
 * {
@@ -26,12 +26,14 @@
 
 body {
   font-family: 'Inter', 'Rubik', system-ui, -apple-system, sans-serif;
-  background-color: var(--bg-main);
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+  background-attachment: fixed;
   color: var(--text-main);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   direction: rtl;
   text-align: right;
+  min-height: 100vh;
 }
 
 .container {
@@ -56,8 +58,9 @@ p {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(8px);
+  background: rgba(11, 17, 32, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-color);
   z-index: 100;
 }
@@ -66,7 +69,8 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 100px;
+  flex-direction: row-reverse; /* Logo on Left, Options on Right */
 }
 
 .logo-container {
@@ -78,26 +82,30 @@ p {
 
 .logo-icon {
   color: var(--accent-primary);
+  width: 48px;
+  height: 48px;
 }
 
 .logo-text {
   font-weight: 800;
-  font-size: 1.5rem;
+  font-size: 3rem; /* Doubled */
   letter-spacing: 1px;
-  color: var(--text-main);
+  background: linear-gradient(to right, #60a5fa, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: 3rem;
 }
 
 .nav-links a {
   color: var(--text-muted);
   text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
+  font-weight: 600;
+  font-size: 1.5rem; /* Doubled */
   transition: color 0.2s ease;
 }
 
@@ -198,15 +206,23 @@ p {
 }
 
 .hero-title {
-  font-size: 3.5rem;
+  font-size: 5rem; /* Massive */
   margin-bottom: 1.5rem;
   letter-spacing: -1px;
+  line-height: 1.1;
+}
+
+.hero-title span {
+  background: linear-gradient(to right, #60a5fa, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
-  margin-bottom: 2.5rem;
+  font-size: 1.75rem; /* Doubled */
+  margin-bottom: 3rem;
   max-width: 90%;
+  color: var(--text-muted);
 }
 
 .hero-image-container {
@@ -223,10 +239,20 @@ p {
 }
 
 /* Services */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
+.bg-light {
+  background-color: transparent;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section-title {
+  font-size: 3.5rem; /* Doubled */
+  margin-bottom: 1.5rem;
+}
+
+.section-description {
+  font-size: 1.5rem; /* Doubled */
+  color: var(--text-muted);
 }
 
 .service-card {
@@ -326,12 +352,12 @@ p {
 
 .form-control {
   width: 100%;
-  padding: 0.875rem 1rem;
-  background: var(--bg-surface);
+  padding: 1.25rem;
+  background: rgba(0, 0, 0, 0.3);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 1.25rem; /* Larger */
   color: var(--text-main);
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
