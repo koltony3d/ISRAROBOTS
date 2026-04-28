@@ -26,7 +26,7 @@ function App() {
       <section className="hero">
         <div className="container hero-split">
           <div className="hero-text-content">
-            <h1 className="hero-title">המקום שבו <span>רעיונות</span> מקבלים צורה</h1>
+            <h1 className="hero-title">מרעיון למוצר — תכנון, מידול והדפסה במקום אחד</h1>
             <p className="hero-subtitle">
               שירותי תכנון מודלים והדפסות תלת-ממד מקצועיים. מדיוק הנדסי ועד לעיצוב אומנותי – אנחנו הופכים את החזון שלך למוצר מוחשי בטכנולוגיות המתקדמות ביותר
             </p>
@@ -45,7 +45,7 @@ function App() {
       <section id="services" className="section bg-light">
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title">שירותים מקצועיים</h2>
+            <h2 className="section-title">יש לך רעיון? אנחנו נהפוך אותו לאבטיפוס</h2>
             <p className="section-description">מעטפת הנדסית מלאה המותאמת לדרישות התעשייה</p>
           </div>
           <div className="services-grid">
@@ -84,7 +84,8 @@ function App() {
             </div>
           </div>
           <div className="contact-form-container">
-            <h2 className="section-title">יצירת קשר מקצועי</h2>
+            <h2 className="section-title">מתכננים, מדמים ומדפיסים מוצרים</h2>
+            <h3 className="contact-form-title">יצירת קשר</h3>
             <p className="contact-subtitle">מלאו את הפרטים ונחזור אליכם עם אפיון והצעת מחיר</p>
             <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
               <div className="form-group">
